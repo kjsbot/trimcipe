@@ -1,0 +1,63 @@
+* { font-family: 'Didact Gothic', sans-serif; }
+
+body {
+    height:100%;
+    margin: 0;
+    overflow: overlay;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item {
+    color: black !important;
+    text-decoration: none !important;
+    border-bottom: 3px solid rgba(129, 129, 129, 0.452);
+}
+
+.nav-item:hover { border-bottom-color: #9ddcce !important; }
+
+.foodpic {
+    border-radius: 20px;
+    width: 270px;
+    height: auto;
+    max-width: 100%;
+}
+
+.titlelink {
+    font-size: 1em;
+    font-weight: bolder;
+    text-decoration: none !important;
+    color: black !important;
+    border-bottom: 3px solid rgba(129, 129, 129, 0.452);
+}
+.titlelink:hover {
+    border-bottom-color: #f7a399 !important;
+}
+
+p { font-weight: bold; }
+
+.og { text-decoration: none !important; color: #e44260 !important; font-weight: bold; }
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: rgba(255, 255, 255, 0.13);
+}
+  /* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 25px;
+}
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(175, 175, 175); 
+    border-radius: 25px;
+}
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(124, 124, 124); 
+}

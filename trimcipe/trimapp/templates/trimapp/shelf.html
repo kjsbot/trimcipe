@@ -1,0 +1,84 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{% static 'trimapp/shelf.css' %}" rel="stylesheet" >
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="{% static 'trimapp/images/favicon-32x32.png' %}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <title>Trimcipe • Recipe Shelf</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-sm navbar-light nav-top">
+            <div class="container-fluid . navbar-expand class">
+              <a class="navbar-brand" href="http://127.0.0.1:8000/trimapp/">
+                <img class="nav-item" src="{% static 'trimapp/images/favicon-32x32.png' %}">
+              </a>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-item" id="navlink" href="http://127.0.0.1:8000/trimapp/" style="margin-left: 5px;">Trim Recipe</a>
+                  </li>
+                </ul>
+                <a class="nav-item" id="navlink" href="http://127.0.0.1:8000/trimapp/shelf" style="margin-right: 5px;">Recipe Shelf</a>
+                <div class="dropdown d-flex">
+                    <a class="btn btn-secondary btn-sm" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="{% static 'trimapp/images/user.png' %}">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                        {% if user.is_authenticated %}
+                            <li class="dropdown-item disabled" style="text-align: center; font-size: 20px; font-weight: 700;">{{ user.username }}</li>
+                            <div class="dropdown-divider"></div>
+                            <li><a class="dropdown-item" href="{% url 'logout_view' %}">Log Out</a></li>
+                        {% else %}
+                            <li><a class="dropdown-item" href="http://127.0.0.1:8000/trimapp/login_view">Log In</a></li>
+                            <li><a class="dropdown-item" href="http://127.0.0.1:8000/trimapp/register">Register</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+        <h1 style="margin-top: 70px; margin-bottom: 50px;">Recipe Shelf</h1>
+        <hr style="width: 80%; text-align:center; margin: 0 auto 65px;">
+
+        {% if not user.is_authenticated %}
+            <h5 style="display:flex; justify-content:center;">
+                <a id="nolink1" href="http://127.0.0.1:8000/trimapp/login_view">Sign in</a>
+                &nbspor&nbsp
+                <a id="nolink2" href="http://127.0.0.1:8000/trimapp/register">create an account</a>
+                &nbspto save recipes!
+            </h5>
+        {% endif %}
+
+        {% if user.is_authenticated and amount == 0 %}
+            <h5 style="display:flex; justify-content:center;">
+                Your saved recipes will appear here.&nbsp
+                <a id="nolink" href="http://127.0.0.1:8000/trimapp">Start saving recipes!</a>
+            </h5>
+        {% elif user.is_authenticated and amount != 0 %}
+            <div class="container mt-3">
+                <div class="row">
+                    {% for recipe in recipes %} <!--  get current recipe id  -->
+                    <div class="col-lg-3 col-md-6 mb-5" style="display: flex; justify-content: center;">
+                        <div id="tile">
+                            <img class="foodpic" src="{{ recipe.image }}">
+                            <h5><a href="http://127.0.0.1:8000/trimapp/recipe/{{ recipe.id }}" class="titlelink">{{ recipe.name }}</a></h5>
+                            <p><img src="{% static 'trimapp/images/serving.png' %}" style="width: 17px; height: auto; filter: invert(1);"> {{ recipe.serving }}</p>
+                            <p><img src="{% static 'trimapp/images/time.png' %}" style="width: 15px; height: auto; filter: invert(1);"> {{ recipe.time }} minutes</p>
+                            <a class="og" href="{{ recipe.url }}" target="blank"><img src="{% static 'trimapp/images/link.png' %}" style="width: 15px; height: auto; filter: invert(1);">Source</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </body>
+</html>

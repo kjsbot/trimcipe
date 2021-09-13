@@ -1,0 +1,60 @@
+*{ font-family: 'Didact Gothic', sans-serif; }
+
+body {
+   background-image: url("images/background.png") !important;
+    background-repeat: no-repeat;
+    background-size: cover; /* removing background-size:cover; fixes the image cutting off issue*/
+    /*use media queries*/
+    min-height:100%;
+}
+
+#navlink { color: white !important; text-decoration: none !important; border-bottom: 3px solid rgba(255, 255, 255, 0.452); }
+#dropdownMenuLink { background-color: transparent !important; border-color: transparent !important; }
+#dropdownMenuLink { border-radius: 50px; padding: 0; margin-left: 20px;}
+.dropdown-item { color: black !important; text-align: center; }
+.dropdown-item:focus { background-color: #b7e6d6 !important; }
+.nav-item:hover { border-bottom-color: #9ddcce !important; }
+
+.content {
+    position: absolute;
+    top: 44%;
+    width: 100%;
+    margin: auto;
+    transform: translateY(-56%);
+}
+
+h1 {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.form-control:focus {
+    outline: #e44260 !important;
+    box-shadow: none !important;
+    border:1px solid #e44260 !important;
+    caret-color: #e44260;
+}
+
+#button-addon2 {
+    background-color: #e44260 !important;
+    border-color: #e44260 !important;
+}
+
+footer {
+    justify-content: center;
+    margin-top: 50px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+
+@media (min-width: 1462px) {
+    body {
+        background-image: none;
+    }
+  }

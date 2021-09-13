@@ -1,0 +1,39 @@
+*{ font-family: 'Didact Gothic', sans-serif; }
+
+body {
+    background-image: url("images/logsignup.jpg") !important;
+    background-repeat: no-repeat;
+    background-size: cover; /* removing background-size:cover; fixes the image cutting off issue*/
+    /*use media queries*/
+    min-height:100%;
+}
+
+#navlink { color: white !important; text-decoration: none !important; border-bottom: 3px solid rgba(255, 255, 255, 0.452); }
+#dropdownMenuLink { background-color: transparent !important; border-color: transparent !important; }
+#dropdownMenuLink { border-radius: 50px; padding: 0; margin-left: 20px;}
+.dropdown-item { color: black !important; text-align: center; }
+.dropdown-item:focus { background-color: #b7e6d6 !important; }
+.nav-item:hover { border-bottom-color: #9ddcce !important; }
+
+.content {
+    position: absolute;
+    top: 50%;
+    margin: auto;
+    transform: translateY(-50%);
+    width: 35%;
+    background-color: rgba(255, 255, 255, 0.856);
+    border-radius: 15px;
+    padding: 40px 0 10px 0;
+}
+
+h1 {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p, .btn btn-primary {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}

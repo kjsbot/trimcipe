@@ -1,0 +1,92 @@
+*{ font-family: 'Didact Gothic', sans-serif; }
+
+html { height: 100%; margin: 0;}
+
+body {
+    background-image: url("images/rbg.jpg") !important; /*darken image 60.1 on https://pinetools.com/darken-image*/
+    background-repeat:no-repeat;
+    background-size:cover;
+    /* removing background-size:cover; fixes the image cutting off issue*/
+    height:100%;
+    margin: 0;
+    overflow: overlay;
+}
+
+a {color: white !important; text-decoration: none;}
+
+.nav-item {
+    color: white !important;
+    text-decoration: none !important;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.452);
+}
+
+.nav-item:hover { border-bottom-color: #9ddcce !important; }
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+h4 { font-family: 'Lora', serif; text-align: center; }
+
+.wrapper {
+    background-color: rgb(245, 245, 245);
+    border-radius: 15px;
+    margin: 0 5px 30px 5px;
+}
+
+.ingredients li {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+.ingre {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    font-weight: 900;
+    color: #e44260; /* 40916c  ef6351 */
+}
+
+.directions li {
+    font-family: 'Didact Gothic', sans-serif;
+    margin-bottom: 10px;
+}
+
+.directions li::marker {
+    font-family: 'Lora', serif;
+    font-size: 25px;
+    font-weight: 900;
+    color: #e44260; /* 40916c  ef6351 */
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+/* over over either ingredients or dicretions list item to see temporary strikethrough and click it to cross it out */
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: rgba(255, 255, 255, 0.13);
+}
+  /* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 25px;
+}
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(175, 175, 175); 
+    border-radius: 25px;
+}
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(124, 124, 124); 
+}
