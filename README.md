@@ -15,6 +15,6 @@ Paste a recipe URL in the input bar and you'll get the trimmed down version of i
 If you sign up or log in, you'll have the option to save recipes inside your cookbook and see them later
 ![Picture of User's Recipe Shelf](https://raw.githubusercontent.com/kjsbot/trimcipe/master/screenshots/shelf.png)
 
-<br> <br>
+<br>
 
 > Credit: [Recipe Scrapers by hhursev](https://github.com/hhursev/recipe-scrapers)
