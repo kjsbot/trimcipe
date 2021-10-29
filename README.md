@@ -1,6 +1,6 @@
 # Trimcipe
 
-A web application that trims down a user submitted recipe and displays just the directions, ingredients, and relevant details. Removes the need to scroll past life stories and ads. Gives you the ablility to store all of your trimmed recpies from different websites in one place.
+A web application that trims down a user submitted recipe and displays just the directions, ingredients, and relevant details. Removes the need to scroll past life stories and ads. Gives you the ablility to store all of your trimmed recpies from different websites in one place. This is a work in progress!!
 
 ![Picture of Trimcipe](https://raw.githubusercontent.com/kjsbot/trimcipe/master/screenshots/main.PNG)
 <!--[Visit the site](https://www.google.com)-->
