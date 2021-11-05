@@ -16,5 +16,3 @@ If you sign up or log in, you'll have the option to save recipes inside your coo
 ![Picture of User's Recipe Shelf](https://raw.githubusercontent.com/kjsbot/trimcipe/master/screenshots/shelf.png)
 
 <br>
-
-> Credit: [Recipe Scrapers by hhursev](https://github.com/hhursev/recipe-scrapers)
