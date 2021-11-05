@@ -14,5 +14,3 @@ Paste a recipe URL in the input bar to get the trimmed down version of it:
 ## Recipe Shelf
 If you sign up or log in, you'll have the option to save recipes inside your cookbook and see them later. This part is a work in progress!!
 ![Picture of User's Recipe Shelf](https://raw.githubusercontent.com/kjsbot/trimcipe/master/screenshots/shelf.png)
-
-<br>
