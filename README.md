@@ -8,7 +8,6 @@ A web application that trims down a user submitted recipe and displays just the 
 ## Site
 Paste a recipe URL in the input bar to get the trimmed down version of it:
 ![Picture of Trimcipe](https://raw.githubusercontent.com/kjsbot/trimcipe/master/screenshots/mainlink.png)
-### ↓
 ![Picture of Trimmed Recipe](https://raw.githubusercontent.com/kjsbot/trimcipe/master/screenshots/recipe.PNG)
 
 ## Recipe Shelf
